@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShadGraph_InteriorMapping
+  m_Shader: {fileID: -6465566751694194690, guid: 202fc330379a406448dfd28ba02a968d, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Cubemap_3ebe2d9d601c4bd38badb508c812335f:
+        m_Texture: {fileID: 8900000, guid: 9ef1cdcffb6dd2540ac626d6d1c39cbc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Cubemap_a5423ae032ac43aebae10f144d470f21:
+        m_Texture: {fileID: 8900000, guid: acf420cf93a8cc74183dab5eca1ce72b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Cubemap_c6099ac7a32e432aa5071bb6828b8db7:
+        m_Texture: {fileID: 8900000, guid: 1202e8900cdb9964e8c8000d9030ef33, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Cubemap_e4f81c91f5cc47fb984e9bff9ad9a0af:
+        m_Texture: {fileID: 8900000, guid: 7c758eeee4672a14b902768d1f1513c5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_11df77ad8423458ca2bae4586ac44a86:
+        m_Texture: {fileID: 2800000, guid: 73d4e529681ebf243bdacba286f12676, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Interior:
+        m_Texture: {fileID: 8900000, guid: 7c758eeee4672a14b902768d1f1513c5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleReflectedCubemap_e35ba73ac0ab4a6d86b8d9197b091560_Cube_1:
+        m_Texture: {fileID: 8900000, guid: 1202e8900cdb9964e8c8000d9030ef33, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_ec84641b798848988aae53a3c484b8dc: 0.58
+    m_Colors:
+    - _Tilling: {r: 0.2, g: 0.2, b: 0, a: 0}
+  m_BuildTextureStacks: []
