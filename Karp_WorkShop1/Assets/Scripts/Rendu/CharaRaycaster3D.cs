@@ -49,7 +49,7 @@ public class CharaRaycaster3D : MonoBehaviour
 
         RaycastHit hitInfo;
 
-        if (Physics.SphereCast(footPos + (rayDirection * rayDist), selfCaps.radius, rayDirection, out hitInfo, 100, mask, QueryTriggerInteraction.Ignore))
+        if (Physics.SphereCast(footPos + (rayDirection * rayDist), selfCaps.radius, rayDirection, out hitInfo, selfCaps.radius, mask, QueryTriggerInteraction.Ignore))
         {
             /*
             Gizmos.color = Color.green;

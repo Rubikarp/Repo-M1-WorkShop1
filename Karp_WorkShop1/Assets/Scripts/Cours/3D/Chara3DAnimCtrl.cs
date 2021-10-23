@@ -14,7 +14,7 @@ public class Chara3DAnimCtrl : MonoBehaviour
         animator.SetFloat("turn", input.StickDir.x);
         animator.SetFloat("speed", input.StickDir.magnitude);
 
-        animator.SetBool("isSliding", chara.isGrounded);
+        animator.SetBool("isSliding", input.isPlanning);
         animator.SetFloat("vertVelocity", rb.velocity.y);
     }
     public void CallJump()

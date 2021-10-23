@@ -27,6 +27,13 @@ public class InputHandler : MonoBehaviour
             return inputMap.isJump;
         }
     }
+    public bool Reset
+    {
+        get
+        {
+            return inputMap.pressR;
+        }
+    }
     private void Update()
     {
         if (inputMap.isJumpBegin)

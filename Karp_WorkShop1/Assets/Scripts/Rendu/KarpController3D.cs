@@ -115,14 +115,16 @@ public class KarpController3D : MonoBehaviour
     }
     private void AirPlanning()
     {
-        if (input.isPlanning && remainingJump < 0)
+        if (input.isPlanning)
         {
-            selfBody.AddForce(-Physics.gravity, ForceMode.Force);
+            selfBody.velocity += -Physics.gravity * 0.5f * Time.deltaTime;
         }
 
-        if (rayCaster.CastCapsule(Ray3Dir.Down) && !isGrounded && canJump)
+        if (rayCaster.CastCapsule(Ray3Dir.Down) && canJump)
         {
             touchFloor?.Invoke();
+            canJump = false;
+            Invoke("JumpCD", jumpCooldown);
         }
     }
 
@@ -138,6 +140,7 @@ public class KarpController3D : MonoBehaviour
         {
             selfBody.AddForce(Vector3.up  * jumpForce, ForceMode.Impulse);
             remainingJump--;
+
             isGrounded = false;
             canJump = false;
             Invoke("JumpCD", jumpCooldown);
@@ -145,6 +148,10 @@ public class KarpController3D : MonoBehaviour
         else if(canJump)
         {
             selfBody.velocity = Vector3.up * jumpSecondaryForce;
+
+            isGrounded = false;
+            canJump = false;
+            Invoke("JumpCD", jumpCooldown);
         }
 
     }

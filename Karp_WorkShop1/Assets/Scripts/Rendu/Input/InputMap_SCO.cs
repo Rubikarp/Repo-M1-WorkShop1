@@ -19,6 +19,7 @@ public class InputMap_SCO : ScriptableObject
     [InputAxis, ShowIf("inputSyst")] public string axisVerti = "Vertical";
     [Header("Button")]
     [InputAxis, ShowIf("inputSyst")] public string buttonJump = "Jump";
+    [InputAxis, ShowIf("inputSyst")] public string buttonReset = "Reset";
 
     [Header("Brut Key Sytem")]
     [Header("Axis")]
@@ -26,6 +27,7 @@ public class InputMap_SCO : ScriptableObject
     [ShowIf("brutKey")] public KeyCode keyBackward = KeyCode.S, keyRight = KeyCode.D, keyLeft = KeyCode.Q;
     [Header("Button")]
     [ShowIf("brutKey")] public KeyCode keyJump = KeyCode.Space;
+    [ShowIf("brutKey")] public KeyCode keyReset = KeyCode.R;
 
     public Vector2 StickDir
     {
@@ -70,6 +72,21 @@ public class InputMap_SCO : ScriptableObject
                 return Input.GetButton(buttonJump);
             }
         }
+    }
+    public bool pressR
+    {
+        get
+        {
+            if (brutKey)
+            {
+                return Input.GetKey(keyReset);
+            }
+            else
+            {
+                return Input.GetButton(buttonReset);
+            }
+        }
+
     }
 
 }
